@@ -1,0 +1,29 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../app/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Account {
+  id          Int            @id @default(autoincrement())
+  code        String
+  description String
+  parent_id   Int?
+  parent      Account?       @relation("AccountHierarchy", fields: [parent_id], references: [id])
+  children    Account[]      @relation("AccountHierarchy")
+  values      AccountValue[]
+}
+
+model AccountValue {
+  id         Int      @id @default(autoincrement())
+  account_id Int
+  period     DateTime
+  value      Float
+  account    Account  @relation(fields: [account_id], references: [id])
+
+  @@unique([account_id, period])
+}
