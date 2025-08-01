@@ -1,0 +1,19 @@
+{
+  "Sidebar": {
+    "dashboard": "Dashboard",
+    "planOfAccounts": "Chart of Accounts",
+    "formulas": "Formulas",
+    "comparative": "Comparative",
+    "upload": "Import",
+    "history": "History",
+    "reports": "Reports",
+    "companies": "Companies",
+    "projects": "Projects",
+    "users": "Users",
+    "systemOptions": "System Options",
+    "settings": "Settings",
+    "helpSupport": "Help & Support",
+    "upgrade": "Upgrade",
+    "languageRegion": "Language & Region"
+  }
+}
