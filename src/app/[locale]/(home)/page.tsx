@@ -4,9 +4,7 @@ import { SidebarInset, SidebarProvider } from '@/components/ui/sidebar'
 import { SiteHeader } from '@/components/site-header'
 import { DataTable } from '@/components/table/_index'
 import { data } from '@/lib/data'
-import { TableNavigation } from '@/components/table-navigation'
 import { SectionCards } from '@/components/section-cards'
-import { DREHeader } from '@/components/dre-header'
 
 export default async function Home() {
   // const data = await prisma.account.findMany({
@@ -44,14 +42,11 @@ export default async function Home() {
       <AppSidebar />
       <SidebarInset>
         <SiteHeader />
-        {/* <DREHeader /> */}
 
         <div className="flex flex-1 flex-col">
           <div className="@container/main flex flex-1 flex-col gap-2">
             <div className="flex flex-col gap-4 py-4 md:gap-6 md:py-6">
               <SectionCards />
-
-              <TableNavigation />
 
               <DataTable data={data} />
             </div>
