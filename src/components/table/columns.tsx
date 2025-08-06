@@ -20,7 +20,7 @@ export function getDREColumns(
 
   return [
     {
-      header: 'Descrição',
+      header: 'Conta',
       accessorKey: 'description',
       cell: ({ row }) => (
         <div
@@ -40,9 +40,9 @@ export function getDREColumns(
           {row.getValue('description')}
         </div>
       ),
-      size: 270,
+
       minSize: 270,
-      maxSize: 270,
+      maxSize: 350,
     },
     ...months.map<ColumnDef<DREAccount>>((month) => ({
       id: month,
@@ -57,18 +57,8 @@ export function getDREColumns(
           currency: 'BRL',
         })
       },
+      minSize: 130,
+      maxSize: 200,
     })),
-    {
-      accessorKey: 'total',
-      header: 'Total Anual',
-      cell: ({ row }) => (
-        <div className="truncate">
-          {(row.getValue('total') as number).toLocaleString('pt-BR', {
-            style: 'currency',
-            currency: 'BRL',
-          })}
-        </div>
-      ),
-    },
   ]
 }

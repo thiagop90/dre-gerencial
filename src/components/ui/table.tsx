@@ -15,6 +15,28 @@ function Table({ className, ...props }: React.ComponentProps<'table'>) {
 
   function onMouseDown(e: React.MouseEvent) {
     if (!ref.current) return
+
+    // Verifica se o clique foi em um column-resizer ou dentro dele
+    const target = e.target as HTMLElement
+    const isColumnResizer =
+      target.closest('.cursor-col-resize') ||
+      target.classList.contains('cursor-col-resize') ||
+      target.closest('[data-column-resizer]')
+
+    // Se for um column-resizer, não inicia o drag
+    if (isColumnResizer) {
+      return
+    }
+
+    // Verifica se o clique foi em um botão, link ou elemento interativo
+    const isInteractiveElement = target.closest(
+      'button, a, input, select, textarea, [role="button"]',
+    )
+
+    if (isInteractiveElement) {
+      return
+    }
+
     e.preventDefault()
 
     setDrag({
@@ -111,7 +133,7 @@ function TableHead({ className, ...props }: React.ComponentProps<'th'>) {
     <th
       data-slot="table-head"
       className={cn(
-        'text-foreground h-12 px-4 text-left align-middle font-medium whitespace-nowrap [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]',
+        'text-foreground h-10 px-4 text-left align-middle font-medium whitespace-nowrap [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]',
         className,
       )}
       {...props}
@@ -124,7 +146,7 @@ function TableCell({ className, ...props }: React.ComponentProps<'td'>) {
     <td
       data-slot="table-cell"
       className={cn(
-        'min-w-32 p-4 align-middle whitespace-nowrap [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]',
+        'min-w-32 px-4 py-3.5 align-middle whitespace-nowrap [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]',
         className,
       )}
       {...props}

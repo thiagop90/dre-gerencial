@@ -1,6 +1,8 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+@custom-variant dark (&:is(.dark *));
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -38,10 +40,14 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+  --shadow-lg: 0 0 0 1px rgba(0,0,0,.08), 0px 2px 2px rgba(0,0,0,.04),0px 8px 16px -4px rgba(0,0,0,.04);
+  --shadow-elevationLight: 0px 1px 1px 0px rgba(0, 0, 0, .05), 0px 1px 1px 0px #fff inset, 0px 0px 0px 1px hsla(0, 0%, 100%, .1) inset, 0px 0px 1px 0px rgba(0, 0, 0, .5);
+  --shadow-inner-shadow-dark-sm: 0px 1px 0px 0px hsla(0,0%,100%,.02) inset,0px 0px 0px 1px hsla(0,0%,100%,.02) inset,0px 0px 0px 1px rgba(0,0,0,.25);
+  --shadow-inner-shadow-dark-float: 0px 1px 0px 0px hsla(0,0%,100%,.03) inset,0px 0px 0px 1px hsla(0,0%,100%,.03) inset,0px 0px 0px 1px rgba(0,0,0,.1),0px 2px 2px 0px rgba(0,0,0,.1),0px 4px 4px 0px rgba(0,0,0,.1),0px 8px 8px 0px rgba(0,0,0,.1);
 }
 
 :root {
-  --radius: 0.625rem;
+  --radius: 0.75rem;
   --background: oklch(1 0 0);
   --foreground: oklch(0.2138 0.0298 263.64);
   --card: oklch(1 0 0);
@@ -107,6 +113,7 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
+    --shadowElevation: 0px 1px 1px 0px rgba(0,0,0,.05),0px 1px 1px 0px #fff inset,0px 0px 0px 1px hsla(0,0%,100%,.1) inset,0px 0px 1px 0px rgba(0,0,0,.5);
 }
 
 @layer base {
