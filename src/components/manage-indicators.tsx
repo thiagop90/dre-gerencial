@@ -24,15 +24,12 @@ import { useMediaQuery } from '@/hooks/use-media-query'
 import { KpiCardList } from './kpi-card/kpi-card-list'
 import { XIcon } from 'lucide-react'
 
-interface ManageIndicatorsProps {
-  selectedCardIds: number[]
-  toggleCardSelection: (cardId: number) => void
-}
+// interface ManageIndicatorsProps {
+//   selectedCardIds: number[]
+//   toggleCardSelection: (cardId: number) => void
+// }
 
-export function ManageIndicators({
-  selectedCardIds,
-  toggleCardSelection,
-}: ManageIndicatorsProps) {
+export function ManageIndicators() {
   const [open, setOpen] = useState(false)
   const isMobile = useMediaQuery('(max-width: 640px)')
 
