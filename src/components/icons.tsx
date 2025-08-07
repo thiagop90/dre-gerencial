@@ -24,8 +24,8 @@ export const Icons = {
   moneyBag: ({ className, ...props }: LucideProps) => (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="32"
-      height="32"
+      width="24"
+      height="24"
       viewBox="0 0 24 24"
       className={className}
       {...props}
@@ -41,8 +41,8 @@ export const Icons = {
   graphUp: ({ className, ...props }: LucideProps) => (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="32"
-      height="32"
+      width="24"
+      height="24"
       viewBox="0 0 24 24"
       className={className}
       {...props}
@@ -62,8 +62,8 @@ export const Icons = {
   wadOfMonet: ({ className, ...props }: LucideProps) => (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="32"
-      height="32"
+      width="24"
+      height="24"
       viewBox="0 0 24 24"
       className={className}
       {...props}
@@ -79,8 +79,8 @@ export const Icons = {
   chartSquare: ({ className, ...props }: LucideProps) => (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="32"
-      height="32"
+      width="24"
+      height="24"
       viewBox="0 0 24 24"
       className={className}
       {...props}
@@ -100,8 +100,8 @@ export const Icons = {
   graphDown: ({ className, ...props }: LucideProps) => (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="32"
-      height="32"
+      width="24"
+      height="24"
       viewBox="0 0 24 24"
       className={className}
       {...props}
@@ -121,8 +121,8 @@ export const Icons = {
   calculator: ({ className, ...props }: LucideProps) => (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="32"
-      height="32"
+      width="24"
+      height="24"
       viewBox="0 0 24 24"
       className={className}
       {...props}
@@ -136,8 +136,8 @@ export const Icons = {
   dollar: ({ className, ...props }: LucideProps) => (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="32"
-      height="32"
+      width="24"
+      height="24"
       viewBox="0 0 24 24"
       className={className}
       {...props}
@@ -153,8 +153,8 @@ export const Icons = {
   case: ({ className, ...props }: LucideProps) => (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="32"
-      height="32"
+      width="24"
+      height="24"
       viewBox="0 0 24 24"
       className={className}
       {...props}
@@ -170,8 +170,8 @@ export const Icons = {
   hammer: ({ className, ...props }: LucideProps) => (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="32"
-      height="32"
+      width="24"
+      height="24"
       viewBox="0 0 24 24"
       className={className}
       {...props}
@@ -187,8 +187,8 @@ export const Icons = {
   buildings: ({ className, ...props }: LucideProps) => (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="32"
-      height="32"
+      width="24"
+      height="24"
       viewBox="0 0 24 24"
       className={className}
       {...props}
@@ -204,8 +204,8 @@ export const Icons = {
   scale: ({ className, ...props }: LucideProps) => (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="32"
-      height="32"
+      width="24"
+      height="24"
       viewBox="0 0 24 24"
       className={className}
       {...props}
@@ -227,8 +227,8 @@ export const Icons = {
   ticket: ({ className, ...props }: LucideProps) => (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="32"
-      height="32"
+      width="24"
+      height="24"
       viewBox="0 0 24 24"
       className={className}
       {...props}
@@ -248,8 +248,8 @@ export const Icons = {
   refresh: ({ className, ...props }: LucideProps) => (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="32"
-      height="32"
+      width="24"
+      height="24"
       viewBox="0 0 24 24"
       className={className}
       {...props}
@@ -269,8 +269,8 @@ export const Icons = {
   buildings2: ({ className, ...props }: LucideProps) => (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="32"
-      height="32"
+      width="24"
+      height="24"
       viewBox="0 0 24 24"
       className={className}
       {...props}
@@ -286,8 +286,8 @@ export const Icons = {
   graph: ({ className, ...props }: LucideProps) => (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="32"
-      height="32"
+      width="24"
+      height="24"
       viewBox="0 0 24 24"
       className={className}
       {...props}
@@ -307,8 +307,8 @@ export const Icons = {
   diagramUp: ({ className, ...props }: LucideProps) => (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="32"
-      height="32"
+      width="24"
+      height="24"
       viewBox="0 0 24 24"
       className={className}
       {...props}
@@ -326,8 +326,8 @@ export const Icons = {
   diagramDown: ({ className, ...props }: LucideProps) => (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="32"
-      height="32"
+      width="24"
+      height="24"
       viewBox="0 0 24 24"
       className={className}
       {...props}
@@ -345,8 +345,8 @@ export const Icons = {
   document: ({ className, ...props }: LucideProps) => (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="32"
-      height="32"
+      width="24"
+      height="24"
       viewBox="0 0 24 24"
       className={className}
       {...props}
@@ -362,8 +362,8 @@ export const Icons = {
   waterdrop: ({ className, ...props }: LucideProps) => (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="32"
-      height="32"
+      width="24"
+      height="24"
       viewBox="0 0 24 24"
       className={className}
       {...props}
@@ -376,6 +376,21 @@ export const Icons = {
         fill="currentColor"
         fillRule="evenodd"
         d="M14.386 1.729a6.18 6.18 0 0 0-4.772 0C5.154 3.59 2.25 8.022 2.25 12.929v.264c0 5.262 4.175 9.557 9.362 9.557h.777c5.186 0 9.361-4.295 9.361-9.557v-.265c0-4.906-2.903-9.337-7.364-11.2m-4.194 1.384a4.68 4.68 0 0 1 3.616 0c3.888 1.623 6.442 5.498 6.442 9.815v.265c0 4.466-3.535 8.057-7.861 8.057h-.777c-4.326 0-7.862-3.591-7.862-8.057v-.265c0-4.317 2.554-8.192 6.442-9.815"
+        clipRule="evenodd"
+      />
+    </svg>
+  ),
+  chart: ({ className, ...props }: LucideProps) => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+    >
+      <path
+        fill="currentColor"
+        fillRule="evenodd"
+        d="M12.05 1.25h-.1c-.664 0-1.237 0-1.696.062c-.491.066-.963.215-1.345.597s-.531.854-.597 1.345c-.062.459-.062 1.032-.062 1.697v2.427a2.3 2.3 0 0 0-.75-.128h-3A2.25 2.25 0 0 0 2.25 9.5v11.75H2a.75.75 0 0 0 0 1.5h20a.75.75 0 0 0 0-1.5h-.25V14.5a2.25 2.25 0 0 0-2.25-2.25h-3q-.396.002-.75.128V4.951c0-.665 0-1.238-.062-1.697c-.066-.491-.215-.963-.597-1.345s-.853-.531-1.345-.597c-.459-.062-1.032-.062-1.697-.062m8.2 20V14.5a.75.75 0 0 0-.75-.75h-3a.75.75 0 0 0-.75.75v6.75zm-6 0V5c0-.728-.002-1.2-.048-1.546c-.044-.325-.115-.427-.172-.484s-.159-.128-.484-.172c-.347-.046-.818-.048-1.546-.048s-1.2.002-1.546.048c-.325.044-.427.115-.484.172s-.128.159-.172.484c-.046.347-.048.818-.048 1.546v16.25zm-6 0V9.5a.75.75 0 0 0-.75-.75h-3a.75.75 0 0 0-.75.75v11.75z"
         clipRule="evenodd"
       />
     </svg>

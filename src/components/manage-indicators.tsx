@@ -1,17 +1,28 @@
-import { SettingsIcon } from 'lucide-react'
 import { Button } from './ui/button'
-import { Checkbox } from './ui/checkbox'
-import { financialIndicators } from '@/constants/financial-indicators'
 import {
   Dialog,
   DialogClose,
   DialogContent,
   DialogDescription,
-  DialogFooter,
   DialogHeader,
   DialogTitle,
   DialogTrigger,
 } from './ui/dialog'
+import { Icons } from './icons'
+import { useState } from 'react'
+import {
+  Drawer,
+  DrawerClose,
+  DrawerContent,
+  DrawerDescription,
+  DrawerFooter,
+  DrawerHeader,
+  DrawerTitle,
+  DrawerTrigger,
+} from './ui/drawer'
+import { useMediaQuery } from '@/hooks/use-media-query'
+import { KpiCardList } from './kpi-card/kpi-card-list'
+import { XIcon } from 'lucide-react'
 
 interface ManageIndicatorsProps {
   selectedCardIds: number[]
@@ -22,67 +33,72 @@ export function ManageIndicators({
   selectedCardIds,
   toggleCardSelection,
 }: ManageIndicatorsProps) {
+  const [open, setOpen] = useState(false)
+  const isMobile = useMediaQuery('(max-width: 640px)')
+
+  if (isMobile) {
+    return (
+      <Drawer open={open} onOpenChange={setOpen}>
+        <DrawerTrigger asChild>
+          <Button size="icon" variant="outline" className="">
+            <Icons.chart />
+            <span className="hidden sm:block">Insights</span>
+          </Button>
+        </DrawerTrigger>
+        <DrawerContent>
+          <DrawerHeader className="border-b">
+            <DrawerTitle>Gerenciar Indicadores</DrawerTitle>
+            <DrawerDescription>
+              Selecione os indicadores que seja exibir no dashboard
+            </DrawerDescription>
+          </DrawerHeader>
+
+          <KpiCardList />
+          <DrawerFooter className="border-t">
+            <DrawerClose asChild>
+              <Button variant="outline">Fechar</Button>
+            </DrawerClose>
+          </DrawerFooter>
+        </DrawerContent>
+      </Drawer>
+    )
+  }
+
   return (
-    <Dialog>
+    <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
-        <Button variant="outline">
-          <SettingsIcon />
-          <span className="line-clamp-1">Gerenciar</span>
+        <Button size="lg" variant="outline" className="">
+          <Icons.chart />
+          <span className="hidden sm:block">Insights</span>
         </Button>
       </DialogTrigger>
       <DialogContent
         showCloseButton={false}
-        className="flex max-h-[60vh] flex-col gap-0 overflow-hidden rounded-xl p-0 md:max-w-2xl"
+        className="flex max-h-[calc(100dvh-2rem)] flex-col gap-0 overflow-hidden rounded-3xl p-0 xl:max-w-6xl"
       >
-        <DialogHeader className="border-b p-4 text-left">
-          <DialogTitle>Gerenciar Indicadores</DialogTitle>
+        <DialogHeader className="relative border-b p-6 text-left">
+          <DialogTitle className="">Gerenciar Indicadores</DialogTitle>
           <DialogDescription>
             Selecione os indicadores que seja exibir no dashboard
           </DialogDescription>
+
+          <DialogClose asChild>
+            <Button
+              size="icon"
+              variant="outline"
+              className="absolute top-1/2 right-6 size-10 -translate-y-1/2 rounded-full"
+            >
+              <XIcon />
+            </Button>
+          </DialogClose>
         </DialogHeader>
-        <div className="grid gap-3 overflow-y-auto p-4 pr-2 md:grid-cols-2">
-          {financialIndicators.map((indicator) => {
-            const isSelected = selectedCardIds.includes(indicator.id)
-
-            return (
-              <div
-                key={indicator.id}
-                className="has-data-[state=checked]:bg-muted/50 has-data-[state=checked]:border-primary/20 has-data-[state=unchecked]:hover:bg-muted/30 relative flex items-start gap-2 rounded-lg border p-4 transition-colors"
-              >
-                <Checkbox
-                  id={String(indicator.id)}
-                  checked={isSelected}
-                  onClick={() => toggleCardSelection(indicator.id)}
-                  className="order-1 after:absolute after:inset-0 after:cursor-pointer"
-                />
-
-                <div className="flex-1 space-y-1.5">
-                  <div className="flex items-center space-x-2">
-                    <indicator.Icon className="size-5" />
-                    <label
-                      htmlFor={String(indicator.id)}
-                      className="text-sm font-medium"
-                    >
-                      {indicator.label}
-                    </label>
-                  </div>
-                  <p className="text-muted-foreground text-xs">
-                    {indicator.description}
-                  </p>
-                  <p className="text-primary text-sm font-semibold">
-                    {indicator.value}
-                  </p>
-                </div>
-              </div>
-            )
-          })}
-        </div>
-        <DialogFooter className="flex justify-end space-x-2 border-t p-4">
-          {/* <Button variant="outline">Resetar</Button> */}
+        <KpiCardList />
+        {/* <DialogFooter className="flex justify-end space-x-2 border-t p-5 sm:p-6">
+          <Button variant="outline">Resetar</Button>
           <DialogClose asChild>
             <Button variant="outline">Fechar</Button>
           </DialogClose>
-        </DialogFooter>
+        </DialogFooter> */}
       </DialogContent>
     </Dialog>
   )
