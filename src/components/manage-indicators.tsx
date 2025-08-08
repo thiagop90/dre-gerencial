@@ -23,6 +23,7 @@ import {
 import { useMediaQuery } from '@/hooks/use-media-query'
 import { KpiCardList } from './kpi-card/kpi-card-list'
 import { XIcon } from 'lucide-react'
+import { Chart } from 'solar-icon-set'
 
 // interface ManageIndicatorsProps {
 //   selectedCardIds: number[]
@@ -37,9 +38,9 @@ export function ManageIndicators() {
     return (
       <Drawer open={open} onOpenChange={setOpen}>
         <DrawerTrigger asChild>
-          <Button size="icon" variant="outline" className="">
+          <Button size="lg" variant="outline" className="z-20">
             <Icons.chart />
-            <span className="hidden sm:block">Insights</span>
+            <span>Insights</span>
           </Button>
         </DrawerTrigger>
         <DrawerContent>
@@ -65,8 +66,8 @@ export function ManageIndicators() {
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
         <Button size="lg" variant="outline" className="">
-          <Icons.chart />
-          <span className="hidden sm:block">Insights</span>
+          <Chart />
+          <span>Insights</span>
         </Button>
       </DialogTrigger>
       <DialogContent

@@ -35,7 +35,7 @@ export function SiteHeader() {
           </Button>
 
           <Button size="sm" variant="ghost" className="gap-2">
-            <span>Jonathan Doe</span>
+            <span className='hidden'>Jonathan Doe</span>
 
             <Avatar className="size-7">
               <AvatarFallback className="bg-[#E59CFD] text-white">
