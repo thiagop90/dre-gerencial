@@ -61,7 +61,10 @@ function Carousel({
       },
       dragFree: true,
     },
-    [AutoScroll({ playOnInit: false, startDelay: 300, speed: 1.5 })],
+    [
+      AutoScroll({ playOnInit: false, startDelay: 300, speed: 1.5 }),
+      ...(plugins ?? []),
+    ],
   )
   const [canScrollPrev, setCanScrollPrev] = React.useState(false)
   const [canScrollNext, setCanScrollNext] = React.useState(false)
