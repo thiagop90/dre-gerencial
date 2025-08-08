@@ -310,7 +310,7 @@ function CarouselAutoScrollToggle({
       data-slot="carousel-next"
       variant={variant}
       size={size}
-      className={cn('size-10 rounded-full')}
+      className={cn('size-10 rounded-full', className)}
       // disabled={!canScrollNext}
       onClick={toggleAutoplay}
       {...props}
